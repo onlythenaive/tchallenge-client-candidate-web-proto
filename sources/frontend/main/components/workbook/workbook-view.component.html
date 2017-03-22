@@ -1,0 +1,37 @@
+
+<div ng-if="self.workbook.status == 'CREATED'">
+
+    <ng-repeat ng-repeat="assignment in self.workbook.assignments">
+        <workbook-assignment-form assignment="assignment"></workbook-assignment-form>
+    </ng-repeat>
+
+    <div class="row maincontent">
+        <div class="col-lg-12">
+            <div class="btn" ng-click="self.submit()">Отправить</div>
+        </div>
+    </div>
+    <div class="row maincontent">
+        <div class="col-lg-12">
+            <div class="btn" ng-click="self.decline()">Отказаться</div>
+        </div>
+    </div>
+</div>
+
+<div ng-if="self.workbook.status == 'DECLINED'">
+
+    DECLINED
+</div>
+
+<div ng-if="self.workbook.status == 'SUBMITTED'">
+
+    <div class="row maincontent">
+        <div class="col-lg-12">
+            <div class="btn" ng-click="self.changeToEssay()">Показать форму эссе</div>
+        </div>
+    </div>
+    <div class="row maincontent">
+        <div class="col-lg-12">
+            <div class="btn" ng-click="self.changeToFeedback()">Показать форму связи</div>
+        </div>
+    </div>
+</div>

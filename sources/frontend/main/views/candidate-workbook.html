@@ -1,0 +1,151 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <base href="/"></base>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>T-Challenge</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="static/styles/main.css"/>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="header clearfix">
+                <h1 class="text-muted">T-Challenge</h1>
+            </div>
+
+            <div class="row maincontent">
+                <h3>
+                    1. Кто здесь "Номер Первый"?
+                </h3>
+                <p>
+                    Какое количество классов, содержащих метод <code>public static void main(String... args) {}</code>, разрешается упаковывать в JAR-файл?
+                </p>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input name="answer" type="radio" value="A"> Только 1 класс на весь архив.</input><br/>
+                                <input name="answer" type="radio" value="B"> Только 1 подобный класс в каждом Java-пакете (package).</input><br/>
+                                <input name="answer" type="radio" value="C"> Сколько угодно, если они все указаны в файле манифеста.</input><br/>
+                                <input name="answer" type="radio" value="D"> Какие-либо ограничения отсутствуют.</input>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <hr/>
+
+            <div class="row maincontent">
+                <h3>
+                    2. Мойщики Окон
+                </h3>
+                <p>
+                    Как много мойщиков окон необходимо для того, чтобы справиться с работой в Сиэттле?
+                </p>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input name="answer" type="text" placeholder="Введите Ваш ответ"/>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <hr/>
+
+            <div class="row maincontent">
+                <h3>
+                    3. Принтер Гейзенберга
+                </h3>
+                <p>
+                    Какие варианты вывода могут принадлежать следующей программе?
+                </p>
+                <pre>
+abstract class Foo {
+
+    protected final i;
+
+    Foo(int i) {
+        this.i = i;
+    }
+}
+
+class Bar extends Foo {
+
+    Bar(int i) {
+        this.i = i;
+    }
+}
+                </pre>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input name="answerA" type="checkbox"/>
+                                <label for="answerA"><samp>X X Y Y X</samp>.</label><br/>
+                                <input name="answerB" type="checkbox"/>
+                                <label for="answerB"><samp>X X X Y Y</samp>.</label><br/>
+                                <input name="answerC" type="checkbox"/>
+                                <label for="answerC">X X X</label><br/>
+                                <input name="answerD" type="checkbox"/>
+                                <label for="answerD">Ни один из предложенных вариантов не возможен.</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <hr/>
+
+            <div class="row maincontent">
+                <h3>
+                    4. Что скрывает слово "REST"
+                </h3>
+                <p>
+                    Дан пример REST-запроса:
+                </p>
+                <pre>
+HTTP 1.1 GET myapp?action=getUser&id=42
+                </pre>
+                <p>
+                    Также приведен пример ответа на вышеуказанный запрос:
+                </p>
+                <pre>
+[
+    {
+        "id": 42
+    }
+]
+                </pre>
+                <p>
+                    Какие проблемы Вы видите в данных примерах? Следуют ли запрос и ответ лучшим практикам REST? Как бы Вы могли их улучшить? Приведите развернутый ответ.
+                </p>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="static/scripts/main.js"></script>
+    </body>
+</html>

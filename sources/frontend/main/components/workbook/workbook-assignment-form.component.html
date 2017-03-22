@@ -1,0 +1,22 @@
+<div class="row maincontent assignment">
+    <h3>
+        {{self.assignment.lineup}}. {{self.assignment.task.title}}
+    </h3>
+    <p>
+        {{self.assignment.task.introduction}}
+    </p>
+    <p>
+        {{self.assignment.task.question}}
+    </p>
+    <form class="form-horizontal">
+        <fieldset>
+            <div class="form-group">
+                <div class="col-md-10">
+                    <ng-repeat ng-repeat="option in self.assignment.task.solutionOptions">
+                        <input name="answer" type="radio" value="option.code"> {{option.content}}</input><br/>
+                    </ng-repeat>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

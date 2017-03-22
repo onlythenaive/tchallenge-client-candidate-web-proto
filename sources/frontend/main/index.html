@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="/"/>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>T-Challenge</title>
+
+        <!--
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
+        -->
+
+        <link rel="stylesheet" href="static/cdn/bootstrap.min.css"/>
+        <link rel="stylesheet" href="static/cdn/bootstrap-theme.min.css"/>
+
+        <link rel="stylesheet" href="static/styles/main.css"/>
+    </head>
+    <body>
+        <div ui-view></div>
+
+        <div ng-controller="screenBlockerController as self" ng-show="self.enabled">
+          <div class="screen-blocker"></div>
+          <div class="wrap">
+            <div class="loader"></div>
+            <div class="loaderbefore"></div>
+            <div class="circular"></div>
+            <div class="circular another"></div>
+            <div class="text"></div>
+          </div>
+        </div>
+
+        <!--
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.2/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-beta.3/angular-ui-router.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+        -->
+
+        <script src="static/cdn/jquery-3.1.1.slim.min.js"></script>
+        <script src="static/cdn/bootstrap.min.js"></script>
+        <script src="static/cdn/angular.min.js"></script>
+        <script src="static/cdn/angular-ui-router.min.js"></script>
+        <script src="static/cdn/ngStorage.min.js"></script>
+
+        <!-- UTILITIES -->
+        <!-- TODO: confirmation -->
+        <script src="static/components/utility/utility.module.js"></script>
+        <script src="static/components/utility/ajax-request-registry.service.js"></script>
+        <script src="static/components/utility/logger.service.js"></script>
+        <script src="static/components/utility/parallax.component.js"></script>
+        <script src="static/components/utility/parallax.controller.js"></script>
+        <script src="static/components/utility/index.component.js"></script>
+        <script src="static/components/utility/index.controller.js"></script>
+        <script src="static/components/utility/flow-view.component.js"></script>
+        <script src="static/components/utility/flow-view.controller.js"></script>
+        <script src="static/components/utility/screen-blocker.controller.js"></script>
+        <script src="static/components/utility/url-resolver.service.js"></script>
+
+        <!-- SECURITY -->
+        <script src="static/components/security/security.module.js"></script>
+        <script src="static/components/security/authentication.service.js"></script>
+
+        <!-- FORUM -->
+        <script src="static/components/forum/forum.module.js"></script>
+        <script src="static/components/forum/forum.routes.js"></script>
+        <script src="static/components/forum/forum.service.js"></script>
+        <script src="static/components/forum/forum-admission.service.js"></script>
+        <script src="static/components/forum/forum-view.component.js"></script>
+        <script src="static/components/forum/forum-view.controller.js"></script>
+        <script src="static/components/forum/forum-admission-view.component.js"></script>
+        <script src="static/components/forum/forum-admission-view.controller.js"></script>
+        <script src="static/components/forum/forum-admission-form.component.js"></script>
+        <script src="static/components/forum/forum-admission-form.controller.js"></script>
+
+        <!-- RESOLUTION -->
+        <script src="static/components/resolution/resolution.module.js"></script>
+        <script src="static/components/resolution/resolution.routes.js"></script>
+        <script src="static/components/resolution/resolution.service.js"></script>
+        <script src="static/components/resolution/resolution-view.component.js"></script>
+        <script src="static/components/resolution/resolution-view.controller.js"></script>
+
+        <!-- WORKBOOK -->
+        <script src="static/components/workbook/workbook.module.js"></script>
+        <script src="static/components/workbook/workbook.routes.js"></script>
+        <script src="static/components/workbook/workbook.service.js"></script>
+        <script src="static/components/workbook/workbook-assignment-form.controller.js"></script>
+        <script src="static/components/workbook/workbook-assignment-form.component.js"></script>
+        <script src="static/components/workbook/workbook-essay-view.controller.js"></script>
+        <script src="static/components/workbook/workbook-essay-view.component.js"></script>
+        <script src="static/components/workbook/workbook-feedback-view.controller.js"></script>
+        <script src="static/components/workbook/workbook-feedback-view.component.js"></script>
+        <script src="static/components/workbook/workbook-view.controller.js"></script>
+        <script src="static/components/workbook/workbook-view.component.js"></script>
+
+        <!-- APPLICATION -->
+        <script src="static/components/application.module.js"></script>
+        <script src="static/components/application.config.js"></script>
+        <script src="static/components/application.routes.js"></script>
+
+        <script src="static/main.js"></script>
+    </body>
+</html>

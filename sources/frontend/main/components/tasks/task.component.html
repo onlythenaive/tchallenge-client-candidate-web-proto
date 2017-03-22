@@ -1,0 +1,10 @@
+<div class="task">
+    <div class="task-ordinal">{{self.task.ordinal}}</div>
+    <div class="task-title">{{self.task.title}}</div>
+    <div class="task-introduction">{{self.task.introduction}}</div>
+    <ng-repeat ng-repeat="snippet in self.task.snippets">
+        <snippet >
+    </ng-repeat>
+    <div class="task-question">{{self.task.question}}</div>
+    <solution taskController="self"></solution>
+</div>

@@ -1,0 +1,23 @@
+{
+  "name": "tchallenge-client-candidate-web-proto",
+  "description": "Application prototype of T-Challenge Web-client for candidates",
+  "version": "1.0.0-PROTOTYPE-SNAPSHOT",
+
+  "private": true,
+  "author": "Ilia Gubarev",
+
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp backend-start"
+  },
+
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "command-line-args": "^3.0.1",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.1.0",
+    "lokijs": "^1.4.1",
+    "uuid": "^3.0.1"
+  }
+}
