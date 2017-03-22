@@ -1,1 +1,1 @@
-# tchallenge-client-candidate-web-proto
+# T-Challenge: Candidate Web-client prototype
