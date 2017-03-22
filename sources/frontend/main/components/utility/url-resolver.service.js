@@ -10,7 +10,7 @@
 
   function UrlResolverService() {
 
-    var baseUrl = 'http://localhost:3000';
+    var baseUrl =  'http://t-challenge.ru:3000'; // 'http://localhost:3000';
     var prefixData = 'data';
 
     var self = this;
