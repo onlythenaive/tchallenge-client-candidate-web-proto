@@ -16,7 +16,16 @@
 
     var self = this;
 
-    init();
+    self.$onInit = function () {
+      init();
+    };
+
+    self.toForm = function () {
+      $('html, body').animate({
+        scrollTop: $("#shortname").offset().top - 100
+      }, 1000);
+      $("#shortname").focus();
+    }
 
     function init() {
       forumService

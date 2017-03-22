@@ -12,7 +12,7 @@
     </div>
     <div class="row maincontent">
         <div class="col-lg-12">
-            <div class="btn btn-info" ng-click="self.decline()">Отказаться</div>
+            <div class="btn btn-link" ng-click="self.decline()">Отказаться</div>
         </div>
     </div>
 </div>
@@ -25,35 +25,40 @@
 <div ng-if="self.workbook.status == 'SUBMITTED'">
 
     <div class="row maincontent">
-        <div class="col-lg-12">
+        <div class="col-lg-1 col-centered">
+            Отлично! Ваш результат:
+        </div>
+    </div>
+
+    <div class="row maincontent">
+        <div class="col-lg-1 col-centered">
             <div ng-if="self.workbook.assessment">
-                {{self.workbook.assessment.percentage}}
-            </div>
-            <div ng-if="!self.workbook.assessment">
-                Not assessed yet!
+                <h1>{{self.workbook.assessment.percentage}}%</h1>
             </div>
         </div>
     </div>
 
-    <div class="row maincontent" ng-if="self.workbook.essay">
+    <div class="row maincontent">
         <div class="col-lg-12">
-            Essay is completed
-        </div>
-    </div>
-    <div class="row maincontent" ng-if="!self.workbook.essay">
-        <div class="col-lg-12">
-            <div class="btn btn-info" ng-click="self.changeToEssay()">Показать форму эссе</div>
+            Обратная связь: 
+            <span ng-if="self.workbook.feedback">
+                Готово!
+            </span>
+            <span ng-if="!self.workbook.feedback">
+                <div class="btn btn-link" ng-click="self.changeToFeedback()">Заполнить</div>
+            </span>
         </div>
     </div>
 
-    <div class="row maincontent" ng-if="self.workbook.feedback">
+    <div class="row maincontent">
         <div class="col-lg-12">
-            Feedback is completed
-        </div>
-    </div>
-    <div class="row maincontent" ng-if="!self.workbook.feedback">
-        <div class="col-lg-12">
-            <div class="btn btn-info" ng-click="self.changeToFeedback()">Показать форму связи</div>
+            О Себе: 
+            <span ng-if="self.workbook.essay">
+                Готово!
+            </span>
+            <span ng-if="!self.workbook.essay">
+                <div class="btn btn-link" ng-click="self.changeToEssay()">Заполнить</div>
+            </span>
         </div>
     </div>
 </div>

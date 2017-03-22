@@ -7,7 +7,7 @@
             <div class="form-group"">
                 <label class="col-sm-3 control-label" for="candidateShortname">Ваше имя:</label>  
                 <div class="col-sm-8 input-div">
-                    <input name="candidateShortname" ng-model="self.admission.shortname" type="text" placeholder="Иван Петров" class="form-control input-sm">
+                    <input id="shortname" name="candidateShortname" ng-model="self.admission.shortname" type="text" placeholder="Иван Петров" class="form-control input-sm">
                     <span class="help-block">Мы рады познакомиться!</span>  
                 </div>
             </div>
@@ -75,17 +75,23 @@
                 <div class="col-sm-3 input-div">
                     <input class="btn btn-info" type="button" ng-click="self.submitForChallenge()" value="Вперед!"></input>
                 </div>
+            </div>
+
+            <div class="form-group" ng-if="!self.essayFieldsVisible">
                 <div class="col-sm-3 input-div">
-                    <input class="btn btn-info" type="button" ng-click="self.showEssayFields()" value="Я хочу просто оставить информацию о себе"></input>
+                    <input class="btn btn-link" type="button" ng-click="self.showEssayFields()" value="Просто оставить информацию о себе"></input>
                 </div>
             </div>
 
             <div class="form-group" ng-if="self.essayFieldsVisible">
                 <div class="col-sm-3 input-div">
-                    <input class="btn btn-info" type="button" ng-click="self.submitForEssay()" value="Готово!"></input>
+                    <input class="btn btn-info" type="button" ng-click="self.submitForEssay()" value="Сохранить"></input>
                 </div>
+            </div>
+
+            <div class="form-group" ng-if="self.essayFieldsVisible">
                 <div class="col-sm-3 input-div">
-                    <input class="btn btn-info" type="button" ng-click="self.submitForChallenge()" value="Все-таки пройду тест заодно!"></input>
+                    <input class="btn btn-link" type="button" ng-click="self.submitForChallenge()" value="Все-таки пройду тест заодно!"></input>
                 </div>
             </div>
         </fieldset>
