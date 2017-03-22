@@ -7,12 +7,12 @@
 
     <div class="row maincontent">
         <div class="col-lg-12">
-            <div class="btn" ng-click="self.submit()">Отправить</div>
+            <div class="btn btn-info" ng-click="self.submit()">Отправить</div>
         </div>
     </div>
     <div class="row maincontent">
         <div class="col-lg-12">
-            <div class="btn" ng-click="self.decline()">Отказаться</div>
+            <div class="btn btn-info" ng-click="self.decline()">Отказаться</div>
         </div>
     </div>
 </div>
@@ -26,12 +26,34 @@
 
     <div class="row maincontent">
         <div class="col-lg-12">
-            <div class="btn" ng-click="self.changeToEssay()">Показать форму эссе</div>
+            <div ng-if="self.workbook.assessment">
+                {{self.workbook.assessment.percentage}}
+            </div>
+            <div ng-if="!self.workbook.assessment">
+                Not assessed yet!
+            </div>
         </div>
     </div>
-    <div class="row maincontent">
+
+    <div class="row maincontent" ng-if="self.workbook.essay">
         <div class="col-lg-12">
-            <div class="btn" ng-click="self.changeToFeedback()">Показать форму связи</div>
+            Essay is completed
+        </div>
+    </div>
+    <div class="row maincontent" ng-if="!self.workbook.essay">
+        <div class="col-lg-12">
+            <div class="btn btn-info" ng-click="self.changeToEssay()">Показать форму эссе</div>
+        </div>
+    </div>
+
+    <div class="row maincontent" ng-if="self.workbook.feedback">
+        <div class="col-lg-12">
+            Feedback is completed
+        </div>
+    </div>
+    <div class="row maincontent" ng-if="!self.workbook.feedback">
+        <div class="col-lg-12">
+            <div class="btn btn-info" ng-click="self.changeToFeedback()">Показать форму связи</div>
         </div>
     </div>
 </div>

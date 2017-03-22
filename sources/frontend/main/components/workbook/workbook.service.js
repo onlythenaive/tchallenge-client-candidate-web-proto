@@ -29,6 +29,16 @@
           .post(urlResolverService.resolveDataUrl('workbooks', workbook.id, 'submission'), workbook);
     };
 
+    self.submitEssay = function (essay) {
+      return $http
+          .post(urlResolverService.resolveDataUrl('workbooks', essay.workbookId, 'essay'), essay);
+    };
+
+    self.submitFeedback = function (feedback) {
+      return $http
+          .post(urlResolverService.resolveDataUrl('workbooks', feedback.workbookId, 'feedback'), feedback);
+    };
+
     self.decline = function (workbook) {
       return $http
           .post(urlResolverService.resolveDataUrl('workbooks', workbook.id, 'declination'), workbook);

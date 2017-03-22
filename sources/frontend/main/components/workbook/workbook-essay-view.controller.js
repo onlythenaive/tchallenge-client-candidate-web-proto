@@ -5,14 +5,31 @@
   angular
       .module('application.workbook')
       .controller('workbookEssayViewController', [
+        '$state',
         '$stateParams',
         'workbookService',
         WorkbookEssayViewController
       ]);
 
-  function WorkbookEssayViewController($stateParams, workbookService) {
+  function WorkbookEssayViewController($state, $stateParams, workbookService) {
 
     var self = this;
+
+    this.submitEssay = function () {
+      workbookService
+          .submitEssay({workbookId: self.workbook.id})
+          .then(function () {
+            $state.go('application.flow.workbook', {
+              workbookId: self.workbook.id
+            });
+          });
+    };
+
+    this.cancel = function () {
+      $state.go('application.flow.workbook', {
+        workbookId: self.workbook.id
+      });
+    };
 
     download();
 

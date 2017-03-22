@@ -14,7 +14,7 @@
 
     if ($state.is('application')) {
       $state.go('application.forum', {
-        forumId: "joker2016"
+        forumId: "it2017"
       });
     }
   }
